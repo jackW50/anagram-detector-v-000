@@ -6,11 +6,11 @@ class Anagram
     @word = word
   end 
   
-  def match(string) 
-    binding.pry 
-    string.delete_prefix('"').delete_suffix('"')
+  def match(%w(string)) 
+    #binding.pry 
+    #string.delete_prefix('"').delete_suffix('"')
     #binding.pry
-    %w(string).select do |string_word|
+    string.select do |string_word|
       string_word.split("").sort == @word.split("").sort 
     end
   end 
