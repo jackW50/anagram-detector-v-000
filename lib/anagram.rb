@@ -7,8 +7,9 @@ class Anagram
   end 
   
   def match(string) 
+    binding.pry 
     string.delete_prefix('"').delete_suffix('"')
-    binding.pry
+    #binding.pry
     %w(string).select do |string_word|
       string_word.split("").sort == @word.split("").sort 
     end
